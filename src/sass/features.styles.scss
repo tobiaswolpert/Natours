@@ -12,7 +12,8 @@
     url(../img/nat-4.jpg);
   background-size: cover;
   background-position: top;
-  // clip-path: polygon(0 10%, 100% 0, 100% 90%, 100% 0%);
+  clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+  margin-top: -20rem;
 }
 
 .feature-box {
@@ -32,5 +33,6 @@
     font-size: 6rem;
     margin-bottom: 0.5rem;
     color: $color-primary-light;
+    --ionicon-stroke-width: 1rem;
   }
 }
