@@ -106,9 +106,11 @@ const Tours = () => {
           </div>
         </div>
       </div>
-      <button classname="btn">
-        <a href="##">Discover all tours</a>
-      </button>
+      <div className="u-center-text u-margin-top-huge">
+        <a href="##" className="btn btn--green">
+          Discover all tours
+        </a>
+      </div>
     </section>
   );
 };
