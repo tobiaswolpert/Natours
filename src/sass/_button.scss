@@ -24,6 +24,7 @@
 }
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -34,9 +35,11 @@
     transition: all 0.2s;
     position: relative;
     font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
   }
 
-  &:hover {
+  &:focus {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
@@ -46,9 +49,11 @@
     }
   }
 
+  &:focus,
   &:active {
-    transform: translateY(-0.1rem);
+    transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    outline: none;
   }
 
   &--white {
