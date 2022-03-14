@@ -7,11 +7,13 @@ import Stories from "./components/stories/stories.component";
 import Booking from "./components/features/booking/booking.component";
 import Footer from "./components/footer/footer.component";
 import Navigation from "./components/navigation/navigation.component";
+import Popup from "./components/popup/popup.component";
 import "./sass/main.scss";
 
 function App() {
   return (
     <div className="App">
+      <Popup />
       <Navigation />
       <Header />
       <Section />
