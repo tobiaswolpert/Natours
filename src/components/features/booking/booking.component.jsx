@@ -18,7 +18,7 @@ const Booking = () => {
                   id="name"
                   required
                 />
-                <label for="name" className="form__label">
+                <label htmlFor="name" className="form__label">
                   Full Name
                 </label>
               </div>
@@ -31,7 +31,7 @@ const Booking = () => {
                   id="email"
                   required
                 />
-                <label for="email" className="form__label">
+                <label htmlFor="email" className="form__label">
                   Full Name
                 </label>
               </div>
@@ -44,7 +44,7 @@ const Booking = () => {
                     id="small"
                     name="size"
                   />
-                  <label for="small" className="form__radio-label">
+                  <label htmlFor="small" className="form__radio-label">
                     <span className="form__radio-button"></span>
                     Small Tour Group
                   </label>
@@ -57,7 +57,7 @@ const Booking = () => {
                     id="large"
                     name="size"
                   />
-                  <label for="large" className="form__radio-label">
+                  <label htmlFor="large" className="form__radio-label">
                     <span className="form__radio-button"></span>
                     Large Tour Group
                   </label>
