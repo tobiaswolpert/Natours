@@ -22,6 +22,54 @@ $color-black: #000;
 //Font
 $default-font-size: 1.6rem;
 
+//Media Query Manager
+/*
+Order of Media Querries:
+1. Base and typography
+2. General Layout
+3. Grid
+4. Page Layout
+5. Components
+
+
+0 - 600px       Phone
+600 - 900px     Tablet Portrait
+900 - 1200px    Tablet Landscape
+1200 - 1800px   Normal Styles
+1800px +        Big Desktop
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}
+
 //Page Reset
 *,
 *::after,
@@ -32,7 +80,19 @@ $default-font-size: 1.6rem;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px
+  }
 }
 
 body {
@@ -43,4 +103,8 @@ body {
   color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
