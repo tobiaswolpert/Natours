@@ -1,6 +1,10 @@
 .section-stories {
   padding: 15rem 0;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .story {
@@ -14,6 +18,16 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0deg);
+  }
+
   &__shape {
     height: 15rem;
     width: 15rem;
@@ -23,6 +37,14 @@
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
     overflow: hidden;
+
+    @include respond(tab-port) {
+      transform: translateX(-6rem) skewX(12deg);
+    }
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0deg);
+    }
   }
 
   &__image {
@@ -34,6 +56,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0deg);
+    }
   }
 
   &__caption {

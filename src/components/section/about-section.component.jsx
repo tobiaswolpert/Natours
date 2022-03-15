@@ -1,7 +1,10 @@
 import React from "react";
 import nat_1_large from "../../img/nat-1-large.jpg";
+import nat_1 from "../../img/nat-1.jpg";
 import nat_2_large from "../../img/nat-2-large.jpg";
+import nat_2 from "../../img/nat-2.jpg";
 import nat_3_large from "../../img/nat-3-large.jpg";
+import nat_3 from "../../img/nat-3.jpg";
 
 const Section = () => {
   return (
@@ -40,6 +43,30 @@ const Section = () => {
         <div className="col-1-of-2">
           <div className="composition">
             <img
+              srcSet={`${nat_1} 300w, ${nat_1_large} 1000w`}
+              alt="Bild 1"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              className="composition__photo composition__photo--p1"
+              src={nat_1_large}
+            />
+
+            <img
+              srcSet={`${nat_2} 300w, ${nat_2_large} 1000w`}
+              alt="Bild 1"
+              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+              className="composition__photo composition__photo--p2"
+              src={nat_2_large}
+            />
+
+            <img
+              srcSet={`${nat_3} 300w, ${nat_3_large} 1000w`}
+              alt="Bild 1"
+              sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+              className="composition__photo composition__photo--p3"
+              src={nat_3_large}
+            />
+
+            {/* <img
               className="composition__photo composition__photo--p1"
               src={nat_1_large}
               alt="Bild 1"
@@ -53,7 +80,7 @@ const Section = () => {
               className="composition__photo composition__photo--p3"
               src={nat_3_large}
               alt="Bild 3"
-            />
+            /> */}
           </div>
         </div>
       </div>
